@@ -1,0 +1,7 @@
+{
+	"files.exclude": {
+		"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/Content": true,
+		"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/.vscode": true,
+		"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/Intermediate": true
+	}
+}

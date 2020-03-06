@@ -1,0 +1,720 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "BattleRoyale Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Debug",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Debug",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyale Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Debug",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"DebugGame",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"DebugGame",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyale Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"DebugGame",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Development",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Development",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyale Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Development",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Shipping",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Shipping",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyale Mac Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Shipping",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Test",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Test",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyale Mac Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale Mac Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"Mac",
+				"Test",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Debug",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Debug",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyale IOS Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Debug",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"DebugGame",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"DebugGame",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyale IOS DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"DebugGame",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Development",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Development",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyale IOS Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Development",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Shipping",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Shipping",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyale IOS Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Shipping",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Test",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Test",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyale IOS Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyale IOS Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyale",
+				"IOS",
+				"Test",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyaleEditor Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyaleEditor",
+				"Mac",
+				"Debug",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyaleEditor Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyaleEditor",
+				"Mac",
+				"Debug",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyaleEditor Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyaleEditor Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyaleEditor",
+				"Mac",
+				"Debug",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyaleEditor Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyaleEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyaleEditor Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyaleEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyaleEditor Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyaleEditor Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyaleEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyaleEditor Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyaleEditor",
+				"Mac",
+				"Development",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyaleEditor Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyaleEditor",
+				"Mac",
+				"Development",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BattleRoyaleEditor Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		},
+		{
+			"label": "BattleRoyaleEditor Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BattleRoyaleEditor",
+				"Mac",
+				"Development",
+				"/Users/lununglee/Documents/GameDevelopment/UnrealEngine4/BattleRoyale/BattleRoyale.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.24"
+			}
+		}
+	]
+}
