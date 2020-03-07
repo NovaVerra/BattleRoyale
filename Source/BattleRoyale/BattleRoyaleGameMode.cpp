@@ -15,3 +15,18 @@ ABattleRoyaleGameMode::ABattleRoyaleGameMode()
 	// use our custom HUD class
 	HUDClass = ABattleRoyaleHUD::StaticClass();
 }
+
+void	ABattleRoyaleGameMode::PostLogin(APlayerController* NewPlayer)
+{
+	Super::PostLogin(NewPlayer);
+}
+
+void	ABattleRoyaleGameMode::PlayerDied(class ABattleRoyaleCharacter* Killed, class ABattleRoyaleCharacter* Killer)
+{
+
+}
+
+void	ABattleRoyaleGameMode::WinnerFound(class ABattleRoyalePlayerState* Winner)
+{
+
+}

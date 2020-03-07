@@ -13,6 +13,14 @@ class ABattleRoyaleGameMode : public AGameModeBase
 
 public:
 	ABattleRoyaleGameMode();
+
+	virtual void							PostLogin(APlayerController* NewPlayer) override; // population players in game
+
+	void									PlayerDied(class ABattleRoyaleCharacter* Killed, class ABattleRoyaleCharacter* Killer);
+	void									WinnerFound(class ABattleRoyalePlayerState* Winner);
+
+	UPROPERTY(Transient) // don't save to disk
+	TArray<class ABattleRoyaleCharacter*>	PlayersAlive {};
 };
 
 
