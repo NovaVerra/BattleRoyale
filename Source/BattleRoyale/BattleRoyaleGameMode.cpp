@@ -4,6 +4,9 @@
 #include "BattleRoyaleHUD.h"
 #include "BattleRoyaleCharacter.h"
 #include "UObject/ConstructorHelpers.h"
+#include "BattleRoyalePlayerController.h"
+#include "BattleRoyalePlayerState.h"
+#include "BattleRoyaleGameState.h"
 
 ABattleRoyaleGameMode::ABattleRoyaleGameMode()
 	: Super()
@@ -19,6 +22,8 @@ ABattleRoyaleGameMode::ABattleRoyaleGameMode()
 void	ABattleRoyaleGameMode::PostLogin(APlayerController* NewPlayer)
 {
 	Super::PostLogin(NewPlayer);
+
+	PlayersAlive.Add(Cast<ABattleRoyalePlayerController>(NewPlayer));
 }
 
 void	ABattleRoyaleGameMode::PlayerDied(class ABattleRoyaleCharacter* Killed, class ABattleRoyaleCharacter* Killer)
