@@ -28,10 +28,23 @@ void	ABattleRoyaleGameMode::PostLogin(APlayerController* NewPlayer)
 
 void	ABattleRoyaleGameMode::PlayerDied(class ABattleRoyaleCharacter* Killed, class ABattleRoyaleCharacter* Killer)
 {
-
+	if (Killed)
+	{
+		if (ABattleRoyalePlayerController* PC = Cast<ABattleRoyalePlayerController>(Killed->GetController()))
+		{
+			PlayersAlive.RemoveSingle(PC);
+		}
+		if (PlayersAlive.Num() == 1 && PlayersAlive.IsValidIndex(0))
+		{
+			WinnerFound(Cast<ABattleRoyalePlayerState>(PlayersAlive[0]->PlayerState));
+		}
+	}
 }
 
 void	ABattleRoyaleGameMode::WinnerFound(class ABattleRoyalePlayerState* Winner)
 {
-
+	if (ABattleRoyaleGameState* GS = GetGameState<ABattleRoyaleGameState>())
+	{
+		GS->Winner = Winner;
+	}
 }

@@ -22,6 +22,3 @@ public:
 	UPROPERTY(Transient) // don't save to disk
 	TArray<class ABattleRoyalePlayerController*>	PlayersAlive {};
 };
-
-
-

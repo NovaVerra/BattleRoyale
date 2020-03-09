@@ -81,6 +81,9 @@ public:
 	uint32 bUsingMotionControllers : 1;
 
 protected:
+
+	UFUNCTION(Server, Reliable)
+	void ServerOnFire();
 	
 	/** Fires a projectile. */
 	void OnFire();
