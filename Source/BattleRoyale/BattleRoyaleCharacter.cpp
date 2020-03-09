@@ -11,6 +11,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "MotionControllerComponent.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
+#include "Net/UnrealNetwork.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -84,6 +85,13 @@ ABattleRoyaleCharacter::ABattleRoyaleCharacter()
 	//bUsingMotionControllers = true;
 }
 
+void	ABattleRoyaleCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ABattleRoyaleCharacter, Killer);
+}
+
 void ABattleRoyaleCharacter::BeginPlay()
 {
 	// Call the base class  
@@ -136,6 +144,20 @@ void ABattleRoyaleCharacter::SetupPlayerInputComponent(class UInputComponent* Pl
 	PlayerInputComponent->BindAxis("TurnRate", this, &ABattleRoyaleCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &ABattleRoyaleCharacter::LookUpAtRate);
+}
+
+void ABattleRoyaleCharacter::OnRep_Killer()
+{
+	if (IsLocallyControlled())	// dont show death screen if other dies
+	{
+		ShowDeathScreen();
+	}
+
+	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	GetMesh()->SetSimulatePhysics(true);
+	GetMesh()->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
+	GetMesh()->SetCollisionResponseToAllChannels(ECR_Block);
+	SetLifeSpan(10.f);
 }
 
 void ABattleRoyaleCharacter::ServerOnFire_Implementation()

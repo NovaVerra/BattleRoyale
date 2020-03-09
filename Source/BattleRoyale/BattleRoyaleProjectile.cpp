@@ -3,6 +3,8 @@
 #include "BattleRoyaleProjectile.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
+#include "BattleRoyaleCharacter.h"
+#include "BattleRoyaleGameMode.h"
 
 ABattleRoyaleProjectile::ABattleRoyaleProjectile() 
 {
@@ -36,11 +38,18 @@ ABattleRoyaleProjectile::ABattleRoyaleProjectile()
 
 void ABattleRoyaleProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	// Only add impulse and destroy projectile if we hit a physics
-	if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != NULL) && OtherComp->IsSimulatingPhysics())
+	if (HasAuthority())
 	{
-		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
+		if (ABattleRoyaleCharacter* HitPlayer = Cast<ABattleRoyaleCharacter>(OtherActor)) // if we hit someone with bullet
+		{
+			if (ABattleRoyaleGameMode* GM = Cast<ABattleRoyaleGameMode>(GetWorld()->GetAuthGameMode())) // if we have, grab their game mode
+			{
+				ABattleRoyaleCharacter* Killer = Cast<ABattleRoyaleCharacter>(GetOwner()); // tell game mode someone has died
+				GM->PlayerDied(HitPlayer, Killer);
 
-		Destroy();
+				HitPlayer->Killer = Killer;
+				HitPlayer->OnRep_Killer();
+			}
+		}
 	}
 }

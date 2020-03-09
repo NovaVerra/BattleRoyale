@@ -3,10 +3,7 @@
 #include "BattleRoyaleGameState.h"
 #include "Net/UnrealNetwork.h"
 
-// Broadcast for UI to catch
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWinnerFound);
-
-void	ABattleRoyaleGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty> & OutLifetimeProps)
+void	ABattleRoyaleGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty> & OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 

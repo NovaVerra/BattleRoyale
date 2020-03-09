@@ -6,6 +6,9 @@
 #include "GameFramework/GameStateBase.h"
 #include "BattleRoyaleGameState.generated.h"
 
+// Broadcast for UI to catch
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FWinnerFound);
+
 /**
  * 
  */
